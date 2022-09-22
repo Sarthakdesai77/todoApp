@@ -1,0 +1,51 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "simple todo application using the Angular and Node",
+  "main": "index.js",
+  "time_stamp": "22 September 2022 at 9:00 AM",
+  "to_do_list": [
+    {
+        "title": "complete assignment",
+        "date": "22/9/2022",
+        "description": "last day of submission 23/09/2022 at 9:00am",
+        "status": "pending"
+    },
+    {
+        "title": "learn angular",
+        "date": "22/9/2022",
+        "description": "learn the front end framework",
+        "status": "pending"
+    },
+    {
+        "title": "learn nodejs",
+        "date": "22/9/2022",
+        "description": "learn the back end framework",
+        "status": "pending"
+    },
+    {
+        "title": "learn mongodb",
+        "date": "22/9/2022",
+        "description": "learn the DBMS",
+        "status": "pending"
+    },
+    {
+        "title": "learn data structures and algorithms",
+        "date": "22/9/2022",
+        "description": "learn the DSA",
+        "status": "pending"
+    }
+],
+  "scripts": {
+    "start": "nodemon src/index.js"
+  },
+  "author": "Sarthak Desai",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "mongoose": "^6.6.1",
+    "nodemon": "^2.0.20"
+  }
+}
