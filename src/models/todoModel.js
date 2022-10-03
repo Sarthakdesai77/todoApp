@@ -26,6 +26,7 @@ const todoSchema = new mongoose.Schema({
         type: String,
         default: false,
     }
+    
 }, { versionKey: false, timestamps: true })
 
 module.exports = mongoose.model('todo', todoSchema)

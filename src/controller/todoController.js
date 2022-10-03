@@ -14,6 +14,7 @@ const createTodo = async (req, res) => {
         const createTodo = await todoModel.create({ title, description, status })
 
         res.status(201).send({ status: true, message: 'Succesfully created', data: createTodo })
+
     } catch (err) {
         return res.status(500).send({ status: false, message: err.message })
     }
@@ -27,6 +28,7 @@ const getTodo = async (req, res) => {
         if (allTodos.length == 0) return res.status(404).send({ status: false, message: 'Todo list is empty' })
 
         res.status(201).send({ status: true, message: 'list of all todos', data: allTodos })
+
     } catch (err) {
         return res.status(500).send({ status: false, message: err.message })
     }
@@ -51,6 +53,7 @@ const updateTodo = async (req, res) => {
         await todoModel.updateOne({ _id: id }, { title, description, status })
 
         res.status(204).send({ status: true, message: 'updated succesfully' })
+
     } catch (err) {
         return res.status(500).send({ status: false, message: err.message })
     }
@@ -68,6 +71,7 @@ const deleteTodo = async (req, res) => {
         await todoModel.findOneAndUpdate({ _id: id }, { isDeleted: true }, { new: true });
 
         res.status(204).send({ status: true, message: 'successfully deleted' })
+        
     } catch (err) {
         return res.status(500).send({ status: false, message: err.message })
     }

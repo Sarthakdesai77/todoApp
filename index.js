@@ -10,8 +10,6 @@ app.use(bodyParser.json());
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(express.static(path.join(__dirname, 'client')));
-
 let clusterLink = process.env.DATABASE_URL
 mongoose.connect(clusterLink, {
     useNewUrlParser: true
